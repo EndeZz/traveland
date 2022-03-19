@@ -17,10 +17,10 @@ html {
 }
 
 body {
-  @include font_config(normal, 400, 1.4rem, 1.6rem);
+  @include font_config(normal, 400, 1.8rem, 2.88rem);
 
   font-family: $font;
-  // color: $color-txt;
+  color: $color-txt;
   // background-color: $color-bg;
 }
 
@@ -36,10 +36,14 @@ input {
   transition: 0.2s;
 }
 
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1242px;
+  max-width: 1140px;
 }
 
 h1 {

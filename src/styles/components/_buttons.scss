@@ -1,0 +1,17 @@
+.btn {
+  @include font_config(normal, 400, 1.6rem, 2.4rem);
+
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  padding: 18px 47px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+
+  &__primary {
+    background-color: $color-primary;
+    color: $color-light;
+    border-radius: 5px;
+  }
+}
