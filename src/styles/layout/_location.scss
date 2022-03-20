@@ -13,8 +13,7 @@
   &__caption {
     @include font_config(normal, 400, 1.8rem, 2.9rem);
 
-    color: $color-txt;
-    opacity: 0.6;
+    color: $color-txt-opacity;
     margin-bottom: 50px;
   }
 
@@ -45,8 +44,7 @@
     &-subtitle {
       @include font_config(normal, 400, 1.8rem, 2.9rem);
 
-      color: $color-txt;
-      opacity: 0.6;
+      color: $color-txt-opacity;
     }
 
     &-figcaption {
