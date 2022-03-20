@@ -13,6 +13,14 @@
     background-color: $color-primary;
     color: $color-light;
     border-radius: 5px;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+
+    &:active {
+      background-color: $color-primary-active;
+    }
   }
 
   &_arrow {
