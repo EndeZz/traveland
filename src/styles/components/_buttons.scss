@@ -14,4 +14,16 @@
     color: $color-light;
     border-radius: 5px;
   }
+
+  &_arrow {
+    &:not(:disabled):hover {
+      transform: scale(1.4);
+      transition: transform 1 ease-in;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
 }
