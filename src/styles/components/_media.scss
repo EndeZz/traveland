@@ -1,8 +1,25 @@
 /* Medium Devices, Desktops*/
 @media only screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
   .blog {
     &__group {
-      grid-template-columns: repeat(1, 1fr);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__card {
+      &:nth-child(n) {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+
+      &-img {
+        height: 334px;
+      }
     }
   }
 
@@ -18,6 +35,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
 }
 
 @media only screen and (max-width: 968px) {
@@ -42,40 +60,42 @@
   }
 
   .blog {
-    &__card:nth-child(1) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+    // &__card:nth-child(1) {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr;
+    // }
   }
 }
 
 /* Small Devices, Tablets*/
 @media only screen and (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
+  // html {
+  //   font-size: 12px;
+  // }
   .screen {
   }
 
   .footer {
+    &__email {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
 @media only screen and (max-width: 512px) {
+  html {
+    font-size: 8px;
+  }
   .header {
     &__list {
       display: none;
     }
   }
-  .blog {
-    &__card {
-      width: 100%;
-    }
-  }
 
-  .location {
-    &__group {
-      flex-direction: column;
+  .screen {
+    &__title {
+
     }
   }
 

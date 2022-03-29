@@ -27,6 +27,10 @@
   &__card:nth-child(1) {
     grid-row-start: 1;
     grid-row-end: 4;
+
+   & .blog__card-img {
+      height: 334px;
+    }
   }
 
   &__card:nth-child(n + 2) {
@@ -35,7 +39,7 @@
   }
 
   &__card {
-    width: 554px;
+    max-width: 554px;
     height: 100%;
     // border: 1px solid rgba(0, 0, 0, 0.1);
     // border-radius: 10px;
@@ -44,7 +48,7 @@
       object-fit: cover;
       border-radius: 10px;
       width: 100%;
-      min-height: 201px;
+      height: 201px;
     }
 
     &-title {
@@ -71,6 +75,9 @@
     &-figcaption {
       padding: 30px 0 30px 30px;
       text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }

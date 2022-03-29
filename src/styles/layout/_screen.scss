@@ -26,6 +26,9 @@
     margin-bottom: 30px;
     max-width: 800px;
     width: 100%;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &__caption {
