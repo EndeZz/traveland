@@ -1,0 +1,96 @@
+.footer {
+  background-color: $color-azure-opacity;
+  padding: 30px 0;
+  margin-top: 12rem;
+
+  &__content {
+    grid-template-columns: repeat(5, minmax(220px, 1fr));
+  }
+
+  &__logo {
+    @include font_config(normal, 400, 2.4rem, 3.6rem);
+
+    color: $color-txt;
+    font-family: $font-logo;
+    margin-bottom: 40px;
+  }
+
+  &__caption,
+  &__hashtag {
+    @include font_config(normal, 400, 1.6rem, 2.6rem);
+    letter-spacing: 0.06em;
+
+    margin-bottom: 10px;
+  }
+
+  &__social {
+    margin-top: 20px;
+    display: flex;
+    gap: 27px;
+  }
+
+  &__data {
+    color: $color-txt;
+
+    &:nth-child(4) {
+      grid-column: span 2;
+      display: grid;
+      align-content: start;
+      justify-content: end;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  &__link {
+    @include font_config(normal, 500, 1.6rem, 2.4rem);
+
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.06em;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 12px;
+      background-color: $color-primary;
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.25s linear;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  &__subscribe {
+    @include font_config(normal, 500, 2rem, 3rem);
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+  }
+
+  &__email {
+    display: flex;
+    gap: 20px;
+  }
+}

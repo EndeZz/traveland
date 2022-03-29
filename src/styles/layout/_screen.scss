@@ -1,0 +1,41 @@
+.screen {
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    object-position: 83%;
+  }
+
+  &__content {
+    position: relative;
+    top: 200px;
+    height: 900px;
+
+    align-content: center;
+    row-gap: 3rem;
+  }
+
+  &__title {
+    @include font_config(normal, 700, 6.5rem, 7.8rem);
+
+    font-family: $font-title;
+    color: $color-light;
+    margin-bottom: 30px;
+    max-width: 800px;
+    width: 100%;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__caption {
+    @include font_config(normal, 400, 1.8rem, 2.9rem);
+
+    color: $color-light;
+    opacity: 0.6;
+    margin-bottom: 40px;
+  }
+}

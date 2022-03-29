@@ -1,0 +1,19 @@
+.input {
+  @include font_config(normal, 400, 1.6rem, 2.4rem);
+
+  outline: none;
+  width: 195px;
+  padding: 10px 20px;
+  background: $color-light;
+  border: 1px solid $color-txt-opacity;
+  border-radius: 5px;
+  letter-spacing: 0.06em;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}

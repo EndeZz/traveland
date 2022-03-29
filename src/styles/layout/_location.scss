@@ -1,0 +1,56 @@
+.location {
+  padding: 12rem 0 2rem;
+  text-align: center;
+
+  &__title {
+    @include font_config(normal, 500, 4.3rem, 6rem);
+
+    font-family: $font-title;
+    color: $color-txt;
+    margin-bottom: 20px;
+  }
+
+  &__caption {
+    @include font_config(normal, 400, 1.8rem, 2.9rem);
+
+    color: $color-txt-opacity;
+    margin-bottom: 50px;
+  }
+
+  &__group {
+    display: flex;
+    // flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__card {
+    min-width: 260px;
+    width: 360px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    &-img {
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      height: 331px;
+    }
+
+    &-title {
+      @include font_config(normal, 500, 2.4rem, 3.6rem);
+
+      font-family: $font-title;
+      color: $color-txt;
+      margin-bottom: 10px;
+    }
+
+    &-subtitle {
+      @include font_config(normal, 400, 1.8rem, 2.9rem);
+
+      color: $color-txt-opacity;
+    }
+
+    &-figcaption {
+      padding: 30px;
+    }
+  }
+}

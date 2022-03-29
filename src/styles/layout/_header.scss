@@ -1,0 +1,71 @@
+.header {
+  color: $color-txt;
+  width: 100%;
+  position: relative;
+  top: 25px;
+  left: 0;
+  z-index: 1;
+
+  &__logo {
+    @include font_config(normal, 400, 2.4rem, 3.6rem);
+
+    color: $color-light;
+    font-family: $font-logo;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 5rem;
+  }
+
+  &__item {
+    @include font_config(normal, 500, 1.8rem, 2.7rem);
+
+    color: $color-light;
+  }
+
+  &__link {
+    @include font_config(normal, 400, 1.6rem, 2.4rem);
+
+    padding: 13px 36px;
+    text-align: center;
+  }
+
+  &__nav-link {
+    @include font_config(normal, 400, 1.6rem, 2.4rem);
+
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.06em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 12px;
+      background-color: $color-primary-hover;
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.25s linear;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+}
